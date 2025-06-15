@@ -1,0 +1,73 @@
+/* Wrapper to center the content */
+.app-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Search bar input styling */
+.movie-search {
+  padding: 0.8em;
+  width: 70%;
+  max-width: 400px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 2rem;
+  outline: none;
+  transition: 0.3s ease all;
+}
+
+.movie-search:focus {
+  border-color: #646cff;
+  box-shadow: 0 0 8px rgba(100, 108, 255, 0.5);
+}
+
+/* Table styling */
+.movie-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.movie-table th,
+.movie-table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.movie-table thead {
+  background-color: rgba(100, 108, 255, 0.1);
+  color: #646cff;
+  font-weight: bold;
+}
+
+.movie-table tr:hover {
+  background-color: rgba(100, 108, 255, 0.05);
+  transition: background-color 0.3s;
+}
+
+/* Light mode overrides */
+@media (prefers-color-scheme: light) {
+  .movie-table {
+    background-color: #fff;
+  }
+
+  .movie-table thead {
+    background-color: #e8e8ff;
+    color: #213547;
+  }
+
+  .movie-table tr:hover {
+    background-color: #f0f0ff;
+  }
+
+  .movie-search {
+    background-color: #fff;
+    border-color: #aaa;
+  }
+}
