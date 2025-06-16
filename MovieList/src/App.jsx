@@ -1,5 +1,5 @@
-import React from "react";
-import "./index.css"; // Make sure CSS is imported
+import React, { useState } from "react";
+import "./index.css";
 
 const MOVIES = [
   { id: 1, title: "Inception", year: 2010, genre: "Action", rating: 8.8 },
@@ -11,10 +11,12 @@ const MOVIES = [
 ];
 
 // Search Bar
-function SearchBar() {
+function SearchBar({ search, onSearchChange }) {
   return (
     <input
       type="text"
+      value={search}
+      onChange={(e) => onSearchChange(e.target.value)}
       placeholder="Enter movie name..."
       className="movie-search"
     />
@@ -51,11 +53,17 @@ function MovieList({ movies }) {
 
 // Main App
 export default function App() {
+  const [search, setSearch] = useState("");
+
+  const filteredMovies = MOVIES.filter((movie) =>
+    movie.title.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div className="app-container">
       <h1>🎬 Movie List</h1>
-      <SearchBar />
-      <MovieList movies={MOVIES} />
+      <SearchBar search={search} onSearchChange={setSearch} />
+      <MovieList movies={filteredMovies} />
     </div>
   );
 }
