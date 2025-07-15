@@ -1,0 +1,39 @@
+.container {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.screen {
+  background: black;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  border-radius: 5px;
+  text-align: right;
+  color: lime;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
