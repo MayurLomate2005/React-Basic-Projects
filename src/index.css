@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #0f0f0f; /* optional, matches bg-zinc-950 */
+  overflow-x: hidden;        /* optional, avoids horizontal scroll */
+}
